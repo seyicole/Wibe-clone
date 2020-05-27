@@ -1,0 +1,382 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Work+Sans&display=swap');
+/* cancelled the left:0 css in boostrap.min file to enable the side apppear from right */
+:root{
+  --mainBlue:#40ACF1;
+  --transparentBlue:rgba(64, 172, 241,0.7);
+  --mainWhite:#FFFFFF;
+  --mainBlack:#000000;
+  --mainGrey:rgb(216, 214, 214);
+  --mainYellow:#e3b505;
+}
+
+
+body{
+  font-family: 'Poppins', sans-serif;
+  color: var(--mainBlack);
+  background: var(--mainWhite);
+  padding: 0;
+  margin: 0;
+}
+
+/* svg:hover{
+    fill: red;
+} */
+
+svg{
+    stroke: black;
+}
+/* svg:hover{
+    stroke: red;
+} */
+
+#navigation{
+    /* position: fixed; */
+  width: 100%;
+  background-color: #fff;
+  transition: top 0.3s;
+}
+
+.hide-nav{
+    visibility: hidden;
+}
+
+.btn-light{
+    background-color: #FFFFFF;
+    border-color: #FFFFFF;
+}
+.btn-light:hover,
+.btn-light:focus {
+  color: #FFFFFF;
+  box-shadow: inset 12.5em 0 0 0 var(--mainBlack);
+}
+
+
+.btn-work:hover,
+.btn-work:focus {
+  color: #000000;
+  box-shadow: inset 12.5em 0 0 0 var(--mainWhite);
+}
+
+/* Nav */
+.overlay {
+    height: 100%;
+    width: 0;
+    /* position: fixed; */
+    z-index: 1;
+    top: 0;
+    right: 0!important;
+    background-color: black;
+    overflow-x: hidden;
+    transition: 0.3s;
+  }
+
+  
+  .overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: right;
+    padding-right: 3rem;
+    margin-top: 30px;
+
+    
+  }
+  
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+  }
+  
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    cursor: pointer;
+  }
+
+
+  /* Animation */
+  .overlay-text {
+    animation-duration: 0.5s;
+    animation-name: slidein;
+  }
+  
+  @keyframes slidein {
+    from {
+      margin-bottom: 100%;
+      width: 300%; 
+    }
+  
+    to {
+      margin-bottom: 0%;
+      width: 100%;
+    }
+  }
+  
+  /* @media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+    }
+  } */
+  
+/* End */
+
+/* some sought of mobile reset */
+/* .container{
+    padding-right: 0px;
+} */
+/* .row{
+    margin-left: 0px;
+} */
+/* end */
+
+header h1{
+line-height: 1.3em;
+font-size: calc(18px + 2.4vw);
+
+}
+
+/* .heading-text{
+    position: absolute;
+    bottom: 0;
+} */
+
+header h4.sub-heading{
+    /* font-size: calc(1px + 2.4vw); */
+    font-family: 'Work Sans', sans-serif;
+    letter-spacing: 0.2rem;
+    color: var(--mainGrey);
+    font-weight: 100;
+}
+
+@media screen and (max-width: 450px) {
+    header h4.sub-heading{
+        font-size: 18px;
+        letter-spacing: 0rem;
+    }
+
+    header h1 {
+        font-size: calc(28px + 2.4vw);
+    }
+
+    .footer-btn .float-right{
+        float: left!important;
+    }
+  } 
+
+.height-max{
+    min-height: calc(100vh - 93px);
+    /* position: relative; */
+}
+
+/* brand/works section */
+.all-works button{
+    background-color: #000000;
+    color: #FFFFFF;
+    font-size: 12px;
+}
+
+.works{
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+.works img{
+    height: 50%;
+}
+
+.zip-img img{
+    transition: all 0.3s;
+    display: block;
+    transform: scale(1);
+}
+
+.zip-img {
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+    height: 50%;
+}
+
+.zip-img:hover img {
+    transform: scale(1.1);
+}
+
+.atlas-img img{
+    transition: all 0.3s;
+    display: block;
+    transform: scale(1);
+}
+
+.atlas-img {
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+    height: 50%;
+}
+
+.atlas-img:hover img {
+    transform: scale(1.1);
+}
+
+.smoke-img img{
+    transition: all 0.3s;
+    display: block;
+    transform: scale(1);
+}
+
+.smoke-img {
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+    height: 50%;
+}
+
+.smoke-img:hover img {
+    transform: scale(1.1);
+}
+
+.car-img img{
+    transition: all 0.3s;
+    display: block;
+    transform: scale(1);
+}
+
+.car-img {
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+    height: 50%;
+}
+
+.car-img:hover img {
+    transform: scale(1.1);
+}
+
+.beer-img img{
+    height: 100%;
+    max-width: 100%;
+    transition: all 0.3s;
+    display: block;
+    width: 100%;
+    height: auto;
+    transform: scale(1);
+}
+
+.beer-img {
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+    height: 100%;
+}
+
+.beer-img:hover img {
+    transform: scale(1.1);
+}
+
+
+.card-body{
+    background-color: #000000;
+}
+.card{
+    border: 0px;
+}
+
+.brand-name{
+    font-size: 14px;
+    opacity: 50%;
+    color: var(--mainGrey);
+    font-weight: normal;
+}
+
+.beer {
+    height: 50vh;
+}
+
+.all-works{
+    margin-top: 10rem;
+}
+
+/* About section */
+section.about{
+    min-height: 100vh;
+    position: relative;
+}
+
+.about .about-text{
+    position: absolute;
+    bottom: 10vh;
+}
+
+.about-text h6{
+    font-size: 2.1rem;
+    max-width: 45rem;
+    padding-bottom: 3rem;
+}
+.about p {
+    min-width: 25rem;
+}
+
+.about button{
+    font-size: 14px;
+}
+
+/* clients section */
+.clients img{
+    filter: grayscale(100%);
+    /* for safari 6-9 */
+    -webkit-filter: grayscale(100%);    
+}
+
+.all-clients button{
+    font-size: 12px;
+    margin: 10rem 0rem;
+}
+
+
+section.connect{
+    min-height: 100vh;
+    position: relative;
+}
+
+.connect .connect-text{
+    position: absolute;
+    bottom: 30vh;
+}
+
+.connect-text h6{
+    font-size: 3.1rem;
+    max-width: 45rem;
+    padding-bottom: 3rem;
+}
+.connect p {
+    min-width: 25rem;
+}
+
+.connect button{
+    font-size: 12px;
+}
+/* end */
+
+/* footer */
+footer h4, li, button {
+    font-family: 'Work Sans', sans-serif;
+}
+footer h4, .footer-copyright{
+    font-size: 11px;
+}
+
+
+
